@@ -45,8 +45,12 @@ export interface PurchaseOrder {
   status: string;
   subTotal: number;
   subTotalInclusiveOfTax: number;
+  supplierName: string;
+  supplierUrl: string;
   taxTotal: number;
   taxes: PurchaseTax[];
   terms: string;
   total: number;
+  vendorId: string;
+  vendorName?: string;
 }
