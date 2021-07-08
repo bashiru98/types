@@ -3,7 +3,7 @@ export interface PurchaseOrderItem {
   description: string;
   discount?: number;
   discountAmount?: number;
-  externalId: string;
+  externalId?: string;
   id: string;
   lineItemId: string;
   name: string;
