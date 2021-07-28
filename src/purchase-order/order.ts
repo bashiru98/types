@@ -11,6 +11,7 @@ export interface PurchaseOrder {
   adjustmentDescription: string;
   attention: string;
   billedStatus: string;
+  billing: Address;
   bills: Bill[];
   comments: PurchaseOrderComment[];
   createdTime: string;
