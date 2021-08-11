@@ -35,7 +35,7 @@ export interface Supplier<T = unknown> {
   };
   jscrapper_urls: string[];
   key: string;
-  languages: string[];
+  languages: (keyof I18nString)[];
   last_translation_update: Date;
   logo: string;
   max_cost: number;
