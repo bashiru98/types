@@ -26,9 +26,10 @@ export interface Coupon<T = { [key: string]: string | number }> {
   type: "salesorder" | "subscription";
   updatedAt: Date;
   useCount: number;
+  zone: string;
 }
 
 interface Discount {
-  type: '$' | '%';
+  type: 'currency' | '%';
   value: number;
 }
