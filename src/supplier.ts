@@ -41,8 +41,8 @@ export interface Supplier<T = unknown> {
   min_cost: number;
   min_stock: number;
   name: string;
+  price_settings: PriceSettings;
   project_key: string;
-  price_settings: priceSettings;
   secret: string;
   skipping_words: string[];
   sku_prefix: string;
@@ -80,7 +80,7 @@ interface Bank {
   swift_code: string;
 }
 
-interface priceSettings {
+interface PriceSettings {
   [key: string]: {
     price_to_sale: number;
     price_to_cost: number;
