@@ -82,7 +82,7 @@ interface Bank {
 
 interface PriceSettings {
   [key: string]: {
-    price_to_sale: number;
     price_to_cost: number;
+    price_to_sale: number;
   }
 }
