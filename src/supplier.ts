@@ -12,7 +12,6 @@ export interface Supplier<T = unknown> {
     tax_number: string | number;
   };
   company_description: string;
-  cost_price: number;
   created_date: Date;
   currency: string;
   default_warehouse_id: string;
@@ -42,8 +41,8 @@ export interface Supplier<T = unknown> {
   min_cost: number;
   min_stock: number;
   name: string;
+  price_settings: PriceSettings;
   project_key: string;
-  sale_price: number;
   secret: string;
   skipping_words: string[];
   sku_prefix: string;
@@ -79,4 +78,11 @@ interface Bank {
   recipient_address: string;
   recipient_name: string;
   swift_code: string;
+}
+
+interface PriceSettings {
+  [key: string]: {
+    price_to_cost: number;
+    price_to_sale: number;
+  }
 }
