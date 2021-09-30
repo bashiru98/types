@@ -38,12 +38,14 @@ export interface Store<T = unknown, P = unknown> {
     | "expandcart"
     | "opencart"
     | "shopify"
+    | "zid"
     | "csv"
     | "ebay"
     | "api"
     | "catalog"
     | "youcan"
-    | "other";
+    | "other"
+    | string;
 
   updated: Date;
 
