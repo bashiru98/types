@@ -36,14 +36,17 @@ export interface Store<T = unknown, P = unknown> {
     | "magento2"
     | "salla"
     | "expandcart"
+    | "expandcart2"
     | "opencart"
     | "shopify"
+    | "zid"
     | "csv"
     | "ebay"
     | "api"
     | "catalog"
     | "youcan"
-    | "other";
+    | "other"
+    | string;
 
   updated: Date;
 
