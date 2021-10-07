@@ -10,6 +10,7 @@ export interface Zone {
   allowed_languages: Uppercase<string>[];
   collect_taxes_from: Uppercase<string>[];
   default_currency: Uppercase<string>;
+  default_language: Lowercase<string>;
   description: I18nString;
   domain: string;
   id: string;
