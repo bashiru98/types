@@ -1,4 +1,4 @@
-import { Address, RoleUser } from "./common";
+import { Address, I18nString, RoleUser } from "./common";
 
 export interface Store<T = unknown, P = unknown> {
   address: BillingAddress;
@@ -55,6 +55,20 @@ export interface Store<T = unknown, P = unknown> {
     "owner" | "support" | "sales" | "accounting" | "products" | "orders"
   >[];
   zone: string;
+
+  subscription: {
+    id: string;
+    membership: {
+      id: string;
+      name: I18nString;
+      sort: number;
+      isDefault: boolean;
+      paymentFrequencyType: string;
+    };
+    attributes: {
+      [K: string]: number | string | boolean;
+    };
+  };
 }
 
 export interface BillingAddress extends Address {
