@@ -1,4 +1,4 @@
-import { Address, RoleUser } from "./common";
+import { Address, I18nString, RoleUser } from "./common";
 
 export interface Store<T = unknown, P = unknown> {
   address: BillingAddress;
@@ -31,6 +31,20 @@ export interface Store<T = unknown, P = unknown> {
     | "uninstalled"
     | "archived"
     | "error";
+  subscription: {
+    attributes: {
+      [K: string]: number | string | boolean;
+    };
+    id: string;
+    membership: {
+      id: string;
+      isDefault: boolean;
+      name: I18nString;
+      paymentFrequencyType: string;
+      sort: number;
+    };
+  };
+
   type:
     | "woocommerce"
     | "magento2"
@@ -49,11 +63,11 @@ export interface Store<T = unknown, P = unknown> {
     | string;
 
   updated: Date;
-
   url: string;
   users: RoleUser<
     "owner" | "support" | "sales" | "accounting" | "products" | "orders"
   >[];
+
   zone: string;
 }
 
