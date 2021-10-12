@@ -5,6 +5,7 @@ export interface PurchaseOrderItem {
   discountAmount?: number;
   externalId?: string;
   id: string;
+  image?: string;
   lineItemId: string;
   name: string;
   quantity: number;
